@@ -1,0 +1,13 @@
+<div class="container text-center">
+  <h1>Tasks</h1>
+  <a href="http://localhost:3000/tasks/new" class="btn btn-primary">New Task</a>
+
+  <div class="row text-center">
+    <% @tasks.each do |task| %>
+    <div class="col-xs-12 columns text-center">
+      <%= link_to task.name, task_path(task) %>
+    </div>
+    <% end %>
+  </div>
+
+</div>
